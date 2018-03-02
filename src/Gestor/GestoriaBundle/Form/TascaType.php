@@ -16,7 +16,11 @@ class TascaType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom', TextType::class )->add('descripcio', TextType::class)->add('dataInici',DateType::class)->add('dataFi',DateType::class)->add('enviar', SubmitType::class);
+        $builder->add('nom', TextType::class )
+                ->add('descripcio', TextType::class)
+                ->add('dataInici',DateType::class)
+                ->add('dataFi',DateType::class)
+                ->add('enviar', SubmitType::class);
     }/**
      * {@inheritdoc}
      */

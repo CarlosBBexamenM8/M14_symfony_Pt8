@@ -1,12 +1,28 @@
 gestor_gestoria_homepage:
     path:     /
     defaults: { _controller: GestorGestoriaBundle:Gestor:index }
-gestor_gestoria_form:
-    path:     /form/usuari
-    defaults: { _controller: GestorGestoriaBundle:Formulari:createUsuari }
+#Tasca
 gestor_gestoria_form_tasca:
     path:     /form/tasca
     defaults: { _controller: GestorGestoriaBundle:Formulari:createTasca }
 gestor_gestoria_form_tasca_afegir:
     path:     /form/tasca/afegir
     defaults: { _controller: GestorGestoriaBundle:Crud:createTasca }
+#Subtasca
+gestor_gestoria_form_subtasca:
+    path:     /form/subtasca
+    defaults: { _controller: GestorGestoriaBundle:Formulari:createSubtasca }
+gestor_gestoria_form_subtasca_afegir:
+    path:     /form/subtasca/afegir
+    defaults: { _controller: GestorGestoriaBundle:Crud:createSubtasca }
+#Usuari 
+gestor_gestoria_form_usuari:
+    path:     /form/usuari
+    defaults: { _controller: GestorGestoriaBundle:Formulari:createUsuari }
+gestor_gestoria_form_usuari_afegir:
+    path:     /form/usuari/afegir
+    defaults: { _controller: GestorGestoriaBundle:Crud:createUsuari }
+#General
+gestor_gestoria_mostrar:
+    path: /mostrar
+    defaults: {_controller: GestorGestoriaBundle:Mostrar:mostrar }

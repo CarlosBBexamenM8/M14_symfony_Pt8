@@ -1,1 +1,21 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <table>
+            <tr>
+                <td><a href="{{ path('gestor_gestoria_form_tasca')}}">Form Tasca</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('gestor_gestoria_form_subtasca')}}">Form Subtasca</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('gestor_gestoria_form_usuari')}}">Form Usuari</a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('gestor_gestoria_mostrar')}}">Mostrar</a></td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
+
