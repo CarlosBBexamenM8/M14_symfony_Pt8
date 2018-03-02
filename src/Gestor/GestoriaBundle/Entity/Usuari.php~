@@ -1,0 +1,57 @@
+<?php
+
+namespace Gestor\GestoriaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuari
+ *
+ * @ORM\Table(name="usuari", indexes={@ORM\Index(name="fk_subtasca", columns={"subtasca"})})
+ * @ORM\Entity
+ */
+class Usuari
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dni", type="text", length=65535, nullable=false)
+     */
+    private $dni;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cognoms", type="text", length=65535, nullable=false)
+     */
+    private $cognoms;
+
+    /**
+     * @var \Subtasca
+     *
+     * @ORM\ManyToOne(targetEntity="Subtasca")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="subtasca", referencedColumnName="id")
+     * })
+     */
+    private $subtasca;
+
+
+}
+

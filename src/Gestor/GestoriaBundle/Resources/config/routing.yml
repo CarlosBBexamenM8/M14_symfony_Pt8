@@ -1,0 +1,12 @@
+gestor_gestoria_homepage:
+    path:     /
+    defaults: { _controller: GestorGestoriaBundle:Gestor:index }
+gestor_gestoria_form:
+    path:     /form/usuari
+    defaults: { _controller: GestorGestoriaBundle:Formulari:createUsuari }
+gestor_gestoria_form_tasca:
+    path:     /form/tasca
+    defaults: { _controller: GestorGestoriaBundle:Formulari:createTasca }
+gestor_gestoria_form_tasca_afegir:
+    path:     /form/tasca/afegir
+    defaults: { _controller: GestorGestoriaBundle:Crud:createTasca }

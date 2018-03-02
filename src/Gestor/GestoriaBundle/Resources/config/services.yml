@@ -1,0 +1,4 @@
+services:
+#    gestor_gestoria.example:
+#        class: Gestor\GestoriaBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
