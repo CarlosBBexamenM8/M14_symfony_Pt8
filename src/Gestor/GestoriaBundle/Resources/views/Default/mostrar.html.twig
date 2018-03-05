@@ -1,0 +1,29 @@
+<link href="{{ asset("css/bootstrap.min.css")}}" rel="stylesheet">
+<div class="container">
+{%for itemT in tasca%}
+    <div>
+        <p>{{itemT.nom}}</p>
+        <p>{{itemT.descripcio}}</p>
+        <p>{{itemT.dataInici|date("d/m/Y")}}</p>
+        <p>{{itemT.dataFi|date("d/m/Y")}}</p>
+
+    </div>
+{%endfor%}
+
+{%for itemS in subtasca%}
+    <div>
+        <p>{{itemS.nom}}</p>
+        <p>{{itemS.tasca.nom}}</p>
+    </div>
+{%endfor%}
+
+{%for itemU in usuari%}
+    <div>
+        <p>{{itemU.dni}}</p>
+        <p>{{itemU.nom}}</p>
+        <p>{{itemU.cognoms}}</p>
+        <p>{{itemU.subtasca.nom}}</p>
+
+    </div>
+{%endfor%}
+</div>
