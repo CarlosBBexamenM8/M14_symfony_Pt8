@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link href="{{ asset("css/style.css")}}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Form{% endblock %}
+
+{% block body %}
+<div class="row">
+	<div class="col-lg-6" style="margin-top:5%;">
+		{{form_start(form, {'action':'tasca/afegir', 'method':'POST'})}} {{form_end(form)}}
+	</div>
+</div>
+{% endblock %}

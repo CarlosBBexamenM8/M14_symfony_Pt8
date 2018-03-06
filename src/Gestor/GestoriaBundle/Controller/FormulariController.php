@@ -28,7 +28,7 @@ public function createTascaAction(Request $request) {
             $data = null;
         }
         $titol = "create";
-        return $this->render('GestorGestoriaBundle:Form:form.html.twig', array('titol' => $titol, 'form' => $form->createView(), $status, $data));
+        return $this->render('GestorGestoriaBundle:Default:formPrueba.html.twig', array('titol' => $titol, 'form' => $form->createView(), $status, $data));
     }
     public function createSubtascaAction(Request $request) {
         $subtasca = new Subtasca();
